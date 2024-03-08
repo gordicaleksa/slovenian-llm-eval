@@ -153,13 +153,6 @@ Note:
 * select only one task at a time, posssible options: `hellaswag,winogrande,piqa,openbookqa,arc_easy,arc_challenge,nq_open,triviaqa,boolq`
 * `start_from_doc_index` is used if you want to resume and translate a particular task only starting from a certain document index (useful in a collaborative setting where multiple people are translating different portions of the task)
 
-
-## Run transliteration
-
-1. Update your env by running `pip install cyrtranslit`
-2. Run the `transliterate_cyrillic_to_latin.py` script
-
-
 # Credits
 
 todo after the project is completed
