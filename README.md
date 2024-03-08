@@ -1,29 +1,14 @@
-# Serbian LLM eval
+# Slovenian LLM eval
 
-Note: it can likely also be used for other HBS languages (Croatian, Bosnian, Montenegrin)
+## Currently supported:
+* `ARC-Challenge`
 
-## What is currently covered:
+## What we want to support:
 * Common sense reasoning: `Hellaswag`, `Winogrande`, `PIQA`, `OpenbookQA`, `ARC-Easy`, `ARC-Challenge`
 * World knowledge: `NaturalQuestions`, `TriviaQA`
 * Reading comprehension: `BoolQ`
 
-See this [Weights & Biases report](https://wandb.ai/gordicaleksa/serbian_llm_eval/reports/First-Serbian-LLM-eval---Vmlldzo2MjgwMDA5) for technical details behind the Serbian LLM eval project.
-
 Please email me at gordicaleksa at gmail com in case you're willing to sponsor the automated GPT-4 effort. You will get the credits and eternal glory. :)
-
-In Serbian:
-```
-I na srpskom, ukoliko ste voljni da finansijski podržite ovaj poduhvat korišćenja ChatGPT da se dobiju kvalitetniji podaci, i koji je od nacionalnog/regionalnog interesa, moj email je gordicaleksa at gmail com. Dobićete priznanje na ovom projektu da ste sponzor (i postaćete deo istorije). :)
-
-Dalje ovaj projekat će pomoći da se pokrene lokalni large language model ekoksistem.
-``````
-
-
-Other benchmarks for Serbian:
-
-- https://github.com/facebookresearch/belebele
-- COPA: https://github.com/clarinsi/benchich/tree/main/copa
-
 
 # Creating the eval - instructions
 
@@ -80,7 +65,7 @@ Before you begin, ensure you meet the following requirements:
 
 4. Follow the instructions below on WSL.
 
-## Instructions for translating lm harness eval from English into Serbian
+## Instructions for translating lm harness eval from English into Slovenian
 
 First let's setup a minimal Python program that makes sure you can run Google Translate on your local machine.
 
@@ -127,7 +112,7 @@ response = client.translate_text(
         "contents": ["How do you do? Translate this."],
         "mime_type": "text/plain",
         "source_language_code": "en-US",
-        "target_language_code": "sr",
+        "target_language_code": "sl",
     }
 )
 value_translated = response.translations[0].translated_text
@@ -145,13 +130,7 @@ Follow these instructions (see below for more details):
 
 ## Create Python environment
 
-You can reuse the above conda env `open-nllb`, additionally do the following:
-
-```
-git clone https://github.com/gordicaleksa/lm-evaluation-harness-serbian
-cd lm-evaluation-harness-serbian
-pip install -e .
-```
+You can reuse the above conda env `open-nllb`. If you encounter any issue please report immediately on Discord! :) We'll fix it quickly.
 
 ## Run translation
 
@@ -161,7 +140,7 @@ Finally run (note `model` and `model_args` are not important for us but we need 
 python main.py \
     --model hf \
     --model_args pretrained=mistralai/Mistral-7B-v0.1 \
-    --tasks hellaswag \
+    --tasks <task> \
     --translation_project_id <your project id>
     --char_limit 500000
     --start_from_doc_index 0
@@ -183,14 +162,4 @@ Note:
 
 # Credits
 
-A huge thank you to the following contributors who selflessly went through the steps above and helped create this project of immense value:
-* [Vera Prohaska](https://vtwoptwo.com/)
-* [Chu Kin Chan](www.linkedin.com/in/roy-ck-chan)
-* [Joe Makepeace](https://www.linkedin.com/in/joe-makepeace-a872a1183/)
-* [Toby Farmer](https://www.linkedin.com/in/tobyfarmer/)
-* [Malvi Bid](https://www.linkedin.com/in/malvibid/)
-* [Raphael Vienne](https://www.linkedin.com/in/raphael-vienne/)
-* [Nenad Aksentijevic](https://www.linkedin.com/in/nenad-aksentijevic-21629a1b6)
-* [Isaac Nicolas](https://www.linkedin.com/in/isaacnicolas/)
-* [Brian Pulfer](https://www.brianpulfer.ch/)
-* [Aldin Cimpo](https://www.linkedin.com/in/aldin-c-b26334189/)
+<todo after the project is completed>

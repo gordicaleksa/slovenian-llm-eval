@@ -299,9 +299,9 @@ def translate_dataset(task_name, translate_fn, first_level_keys, second_level_ke
     return num_chars_dataset_current
 
 
-def translate_eval(task_dict_items, target_lang="sr", project_id=None, char_limit=500000, start_from_doc_index=None):
+def translate_eval(task_dict_items, target_lang="sl", project_id=None, char_limit=500000, start_from_doc_index=None):
     assert project_id is not None, "Project ID must be specified"
-    assert target_lang == "sr", "Only Serbian (Cyrillic) is supported for now"
+    assert target_lang == "sl", "Only Slovenian is supported for now"
 
     client = translate.TranslationServiceClient()
     location = "global"
@@ -309,7 +309,7 @@ def translate_eval(task_dict_items, target_lang="sr", project_id=None, char_limi
 
     this_file_path = os.path.dirname(os.path.realpath(__file__))
     parent_dir_path = os.path.abspath(os.path.join(this_file_path, os.pardir))
-    out_dir = os.path.join(parent_dir_path, "serbian_eval")
+    out_dir = os.path.join(parent_dir_path, "slovenian_eval")
     os.makedirs(out_dir, exist_ok=True)
 
     debug_translate_fn = get_translate_fn(client, parent, target_lang, debug_mode=True)
