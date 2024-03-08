@@ -130,7 +130,10 @@ Follow these instructions (see below for more details):
 
 ## Create Python environment
 
-You can reuse the above conda env `open-nllb`. If you encounter any issue please report immediately on Discord! :) We'll fix it quickly.
+You can reuse the above conda env `open-nllb`.
+Next up navigate to the root of the project and run `pip install -e .`
+
+If you encounter any issue please report immediately on Discord! :) We'll fix it quickly.
 
 ## Run translation
 
