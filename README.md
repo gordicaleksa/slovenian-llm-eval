@@ -20,7 +20,7 @@ Please email me at gordicaleksa at gmail com in case you're willing to sponsor t
 
 * if this is the first time you're creating a gcloud project you'll have 300$ of free credits!
 
-* sync with Aleksa in [Discord](https://discord.gg/peBrCpheKE) in open-hbs-llm channel on which tasks to tackle next.
+* sync with Aleksa in [Discord](https://discord.gg/peBrCpheKE) in slovenian-eval channel on which tasks to tackle next.
 
 ## Prerequisites
 
@@ -119,7 +119,7 @@ value_translated = response.translations[0].translated_text
 print(value_translated)
 ```
 
-# Running translation of evals from English into Serbian
+# Running translation of evals from English into Slovenian
 
 Follow these instructions (see below for more details):
 1. Create a Python env for this project
