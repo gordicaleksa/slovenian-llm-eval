@@ -162,4 +162,4 @@ Note:
 
 # Credits
 
-<todo after the project is completed>
+todo after the project is completed
